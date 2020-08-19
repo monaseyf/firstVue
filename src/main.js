@@ -4,6 +4,9 @@ import vuetify from './plugins/vuetify';
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import router from './router'
+import BaseIcon from './components/BaseIcon.vue'
+
+Vue.component('BaseIcon', BaseIcon)
 
 Vue.config.productionTip = false
 
