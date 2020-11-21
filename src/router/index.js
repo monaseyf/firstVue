@@ -35,6 +35,17 @@ Vue.use(VueRouter)
     name:'Signup',
     component: () => import ('../views/Signup.vue')
   },
+  {
+    path: '/',
+    name: 'event-list',
+    component:  () => import ('../components/EventList.vue')
+  },
+  {
+    path: '/event/:id',
+    name: 'event-show',
+    component:() => import ('../views/EventShow.vue'),
+    props: true
+  },
 ]
 
 const router = new VueRouter({
