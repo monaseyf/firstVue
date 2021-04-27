@@ -1,36 +1,20 @@
 <template>
   <v-app>
-    <v-app-bar app color="light-blue darken-4">
-      <v-toolbar-title>Vuetify Dashboard</v-toolbar-title>
+    <v-app-bar class="MyAppBar" app color="secondary light" >
+      <!-- <h4 >فرم استخدام تخصصی</h4> -->
       <v-spacer></v-spacer>
       <v-btn
         v-for="link in links"
         :key="`${link.label}-header-link`"
         text
         rounded
+        color="white"
         :to="link.url"
       >{{ link.label }}</v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <router-view></router-view>
-    </v-content>
-    <v-footer color="light-blue lighten-1" padless>
-      <v-layout justify-center wrap>
-        <v-btn
-          v-for="link in links"
-          :key="`${link.label}-footer-link`"
-          color="white"
-          text
-          rounded
-          class="my-2"
-          :to="link.url"
-        >{{ link.label }}</v-btn>
-        <v-flex light-blue lighten-2 py-4 text-center white--text xs12>
-          {{ new Date().getFullYear() }} —
-          <strong>Vuetify Dashboard</strong>
-        </v-flex>
-      </v-layout>
-    </v-footer>
+    </v-main>
   </v-app>
 </template>
 
@@ -41,29 +25,19 @@ export default {
     return {
       links: [
         {
-          label: "Home",
+          label: "فرم ثبت نام",
           url: "/",
         },
         {
-          label: "Login",
-          url: "/login",
-        },
-        {
-          label: "Signup",
-          url: "/signup",
-        },
-        {
-          label: "Dashboard",
+          label: "داشبورد",
           url: "/dashboard",
         },
+
       ],
     };
   },
   methods: {
-    toggleTheme() {
-      this.$vuetify.theme.themes.dark.anchor = "#41B883";
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    },
+  
   },
 };
 </script>
@@ -79,6 +53,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+.MyAppBar{
+  flex-direction: row-reverse;
+  color: #fff;
 }
 #app {
   box-sizing: border-box;
@@ -125,6 +103,7 @@ h3 {
 h4 {
   font-size: 21px;
   font-weight: 700;
+  color: #fff;
 }
 h5 {
   font-size: 16px;
@@ -292,4 +271,5 @@ select:focus::ms-value {
 select::ms-expand {
   opacity: 0;
 }
+
 </style>

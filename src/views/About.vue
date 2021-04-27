@@ -68,7 +68,8 @@ export default {
       this.type = 'A' 
     },
     activeSegmentB: function(){
-      this.type = 'B' , this.image = image1
+      this.type = 'B'  
+      // this.image = image1
     },
     activeSegmentC: function(){
       this.type = 'C'

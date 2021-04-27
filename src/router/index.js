@@ -46,6 +46,12 @@ Vue.use(VueRouter)
     component:() => import ('../views/EventShow.vue'),
     props: true
   },
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component:() => import ('../components/safarayaneh/Dashboard.vue'),
+    props: true
+  },
 ]
 
 const router = new VueRouter({

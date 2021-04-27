@@ -62,7 +62,8 @@ var routes = [{
       return _interopRequireWildcard(require('../views/Signup.vue'));
     });
   }
-}, {
+},
+ {
   path: '/',
   name: 'event-list',
   component: function component() {
@@ -70,14 +71,25 @@ var routes = [{
       return _interopRequireWildcard(require('../components/EventList.vue'));
     });
   }
-}, {
+},
+
+ {
   path: '/event/:id',
   name: 'event-show',
   component: function component() {
     return Promise.resolve().then(function () {
       return _interopRequireWildcard(require('../views/EventShow.vue'));
     });
-  },
+  }
+},
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: function component() {
+      return Promise.resolve().then(function () {
+        return _interopRequireWildcard(require('../components/Dashboard.vue'));
+      });
+    },
   props: true
 }];
 var router = new _vueRouter["default"]({
