@@ -1,31 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import stock from './stock'
+import portfolio from './portfolio'
+import * as actions from './actions'
 Vue.use(Vuex)
 
-// export const store = new Vuex.Store({
   export default new Vuex.Store({
-  // state: {
-  //   return: {
-  //   counter:0,
-  //   studentName: '',
-  //   // products: [
-  //   //   { name: 'Tshirt', price: 20 },
-  //   //   { name: 'skirt', price: 40 },
-  //   //   { name: 'jeen', price: 50 },
-  //   //   { name: 'shirt', price: 10 }
-  //   //   ],
-  //   }
-  // },
-
-  // getters: {
-    
-  //   },
-
-  // mutations: {
-  //   setStudentName: function (studentName,newValue) {
-  //     state.studentName = newValue } ,
-  // },
-
+  actions,
+  modules:{
+    stock,
+    portfolio
+  }
     
 })

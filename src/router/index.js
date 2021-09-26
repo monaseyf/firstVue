@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../components/Home.vue'
 // import User from '../views/User.vue '
 
 Vue.use(VueRouter)
@@ -35,11 +35,7 @@ Vue.use(VueRouter)
     name:'Signup',
     component: () => import ('../views/Signup.vue')
   },
-  {
-    path: '/',
-    name: 'event-list',
-    component:  () => import ('../components/EventList.vue')
-  },
+
   {
     path: '/event/:id',
     name: 'event-show',
@@ -47,9 +43,21 @@ Vue.use(VueRouter)
     props: true
   },
   {
-    path: '/Dashboard',
-    name: 'Dashboard',
-    component:() => import ('../components/safarayaneh/Dashboard.vue'),
+    path: '/test',
+    name: 'test',
+    component:() => import ('../views/test.vue'),
+    props: true
+  },
+  {
+    path: '/Stock',
+    name: 'Stock',
+    component:() => import ('../components/Stocks/Stocks.vue'),
+    props: true
+  },
+  {
+    path: '/Portfolio',
+    name: 'Portfolio',
+    component:() => import ('../components/portfolio/Portfolio.vue'),
     props: true
   },
 ]
